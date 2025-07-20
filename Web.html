@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SHEN STORE - Free Fire Top-Up</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>SHEN STORE</h1>
+    <p>Trusted Free Fire Top-Up Store in Sri Lanka 🇱🇰</p>
+  </header>
+
+  <section class="products">
+    <h2>🔥 Choose Your Diamond Package</h2>
+    <div class="product-grid">
+      <div class="card">
+        <h3>💎 100 Diamonds</h3>
+        <p class="price">LKR 300</p>
+        <button onclick="order('100 Diamonds', 300)">Order Now</button>
+      </div>
+      <div class="card">
+        <h3>💎 310 Diamonds</h3>
+        <p class="price">LKR 900</p>
+        <button onclick="order('310 Diamonds', 900)">Order Now</button>
+      </div>
+      <div class="card">
+        <h3>💎 520 Diamonds</h3>
+        <p class="price">LKR 1500</p>
+        <button onclick="order('520 Diamonds', 1500)">Order Now</button>
+      </div>
+      <div class="card">
+        <h3>💎 1060 Diamonds</h3>
+        <p class="price">LKR 2900</p>
+        <button onclick="order('1060 Diamonds', 2900)">Order Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="payment">
+    <h2>💰 Payment Instructions (Ez Cash)</h2>
+    <p>Send payment to: <strong>077XXXXXXX</strong></p>
+    <p>After payment, fill the form below and send your screenshot to <a href="https://t.me/novatopup_bot" target="_blank">@novatopup_bot</a></p>
+  </section>
+
+  <section class="order-form">
+    <h2>📝 Order Form</h2>
+    <form onsubmit="submitForm(event)">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="text" id="ffid" placeholder="Free Fire ID" required>
+      <input type="text" id="amount" placeholder="Package (e.g. 310 Diamonds)" required>
+      <input type="text" id="payment" placeholder="Ez Cash Number Used" required>
+      <button type="submit">Submit Order</button>
+    </form>
+    <p id="message" class="success"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SHEN STORE | Designed for Nova / Tharu Top-Up Style</p>
+  </footer>
+
+  <script>
+    function order(packageName, price) {
+      document.getElementById('amount').value = packageName;
+    }
+
+    function submitForm(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      const ffid = document.getElementById("ffid").value;
+      const amount = document.getElementById("amount").value;
+      const payment = document.getElementById("payment").value;
+
+      // This just simulates a form submission
+      document.getElementById("message").textContent = "✅ Order submitted successfully! Please send screenshot to @novatopup_bot.";
+      
+      // Clear form
+      document.querySelector("form").reset();
+    }
+  </script>
+</body>
+</html>
