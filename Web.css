@@ -1,0 +1,123 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #0f0f0f;
+  color: white;
+}
+
+header {
+  background-color: #111;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 0 10px #00ffe5;
+}
+
+header h1 {
+  color: #00ffe5;
+  margin: 0;
+}
+
+header p {
+  color: #ccc;
+  margin-top: 5px;
+}
+
+.products {
+  padding: 30px;
+  text-align: center;
+}
+
+.product-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,255,229,0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,255,229,0.3);
+}
+
+.card .price {
+  color: #fff700;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.card button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #00ffe5;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.payment {
+  background: #121212;
+  padding: 30px;
+  margin: 40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,255,229,0.2);
+  text-align: center;
+}
+
+.payment a {
+  color: #00ffe5;
+  text-decoration: none;
+}
+
+.order-form {
+  text-align: center;
+  padding: 30px;
+}
+
+.order-form form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+
+.order-form input {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.order-form button {
+  padding: 12px;
+  background: #00ffe5;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.success {
+  margin-top: 10px;
+  color: #00ff91;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #111;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  color: #888;
+}
